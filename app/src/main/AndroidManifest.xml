@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ukkappcafe">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UKKAppCafe"
+        tools:targetApi="31">
+        <activity
+            android:name=".menu.minuman.MinumanDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.minuman.MinumanFetchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.minuman.MinumanInsertionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.makanan.MakananDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.makanan.MakananFetchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.makanan.MakananInsertionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.minuman.MinumanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.makanan.MakananActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.MenuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.UserInsertionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserFetchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
