@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.ukkappcafe.R
-import com.example.ukkappcafe.user.UserFetchingActivity
 import com.google.firebase.database.FirebaseDatabase
 
 class MakananDetailsActivity : AppCompatActivity() {

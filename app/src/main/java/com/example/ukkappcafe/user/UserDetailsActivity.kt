@@ -67,7 +67,7 @@ class UserDetailsActivity : AppCompatActivity() {
         uTask.addOnSuccessListener {
             Toast.makeText(this, "User data deleted",Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, UserFetchingActivity::class.java)
+            val intent = Intent(this, UserMainActivity::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener { error ->

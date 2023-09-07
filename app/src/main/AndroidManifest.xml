@@ -44,9 +44,6 @@
             android:name=".user.UserInsertionActivity"
             android:exported="false" />
         <activity
-            android:name=".user.UserFetchingActivity"
-            android:exported="false" />
-        <activity
             android:name=".user.UserDetailsActivity"
             android:exported="false" />
         <activity
