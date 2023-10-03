@@ -73,6 +73,7 @@ class UserMainActivity : AppCompatActivity() {
                             intent.putExtra("userName", userList[position].userName)
                             intent.putExtra("userUsername", userList[position].userUsername)
                             intent.putExtra("userPassword", userList[position].userPassword)
+                            intent.putExtra("userRole", userList[position].userRole)
                             startActivity(intent)
                         }
                     })

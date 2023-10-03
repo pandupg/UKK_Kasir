@@ -17,6 +17,7 @@ class UserDetailsActivity : AppCompatActivity() {
     private lateinit var tvUserName: TextView
     private lateinit var tvUserUsername: TextView
     private lateinit var tvUserPassword: TextView
+    private lateinit var tvUserRole: TextView
     private lateinit var btnUpdateUser: Button
     private lateinit var btnDeleteUser: Button
 
@@ -46,6 +47,7 @@ class UserDetailsActivity : AppCompatActivity() {
         tvUserName = findViewById(R.id.tvUserName)
         tvUserUsername = findViewById(R.id.tvUserUsername)
         tvUserPassword = findViewById(R.id.tvUserPassword)
+        tvUserRole = findViewById(R.id.tvUserRole)
 
         btnUpdateUser = findViewById(R.id.btnUpdateUser)
         btnDeleteUser = findViewById(R.id.btnDeleteUser)
@@ -56,6 +58,7 @@ class UserDetailsActivity : AppCompatActivity() {
         tvUserName.text = intent.getStringExtra("userName")
         tvUserUsername.text = intent.getStringExtra("userUsername")
         tvUserPassword.text = intent.getStringExtra("userPassword")
+        tvUserRole.text = intent.getStringExtra("userRole")
     }
 
     private fun deleteRecord(
@@ -88,12 +91,14 @@ class UserDetailsActivity : AppCompatActivity() {
         val etUserName = uDialogView.findViewById<EditText>(R.id.etUserName)
         val etUserUsername = uDialogView.findViewById<EditText>(R.id.etUserUsername)
         val etUserPassword = uDialogView.findViewById<EditText>(R.id.etUserPassword)
+        val etUserRole = uDialogView.findViewById<EditText>(R.id.etUserRole)
 
         val btnUpdateDataUser = uDialogView.findViewById<Button>(R.id.btnUpdateDataUserDialog)
 
         etUserName.setText(intent.getStringExtra("userName").toString())
         etUserUsername.setText(intent.getStringExtra("userUsername").toString())
         etUserPassword.setText(intent.getStringExtra("userPassword").toString())
+        etUserRole.setText(intent.getStringExtra("userRole").toString())
 
         uDialog.setTitle("Updating $userName Record")
 
@@ -105,7 +110,8 @@ class UserDetailsActivity : AppCompatActivity() {
                 userId,
                 etUserName.text.toString(),
                 etUserUsername.text.toString(),
-                etUserPassword.text.toString()
+                etUserPassword.text.toString(),
+                etUserRole.text.toString()
             )
 
             Toast.makeText(applicationContext, "User Data Updated", Toast.LENGTH_LONG).show()
@@ -113,6 +119,7 @@ class UserDetailsActivity : AppCompatActivity() {
             tvUserName.text = etUserName.text.toString()
             tvUserUsername.text = etUserUsername.text.toString()
             tvUserPassword.text = etUserPassword.text.toString()
+            tvUserRole.text = etUserRole.text.toString()
 
             alertDialog.dismiss()
         }
@@ -122,10 +129,11 @@ class UserDetailsActivity : AppCompatActivity() {
         userId: String,
         userName: String,
         userUsername: String,
-        userPassword: String
+        userPassword: String,
+        userRole: String
     ){
         val dbref = FirebaseDatabase.getInstance().getReference("Users").child(userId)
-        val userInfo = UserModel(userId, userName, userUsername, userPassword)
+        val userInfo = UserModel(userId, userName, userUsername, userPassword, userRole)
         dbref.setValue(userInfo)
     }
 }

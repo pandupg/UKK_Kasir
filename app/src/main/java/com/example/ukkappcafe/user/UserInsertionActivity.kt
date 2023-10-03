@@ -14,6 +14,7 @@ class UserInsertionActivity : AppCompatActivity() {
     private lateinit var etUserName: EditText
     private lateinit var etUserUsername: EditText
     private lateinit var etUserPassword: EditText
+    private lateinit var etUserRole: EditText
     private lateinit var btnSaveDataUser: Button
     private lateinit var dbRef: DatabaseReference
 
@@ -24,6 +25,7 @@ class UserInsertionActivity : AppCompatActivity() {
         etUserName = findViewById(R.id.etUserName)
         etUserUsername = findViewById(R.id.etUserUsername)
         etUserPassword = findViewById(R.id.etUserPassword)
+        etUserRole = findViewById(R.id.etUserRole)
         btnSaveDataUser = findViewById(R.id.btnSaveUser)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Users")
@@ -37,6 +39,7 @@ class UserInsertionActivity : AppCompatActivity() {
         val userName = etUserName.text.toString()
         val userUsername = etUserUsername.text.toString()
         val userPassword = etUserPassword.text.toString()
+        val userRole = etUserRole.text.toString()
 
         if (userName.isEmpty()) {
             etUserName.error = "Please enter name"
@@ -47,10 +50,13 @@ class UserInsertionActivity : AppCompatActivity() {
         if (userPassword.isEmpty()) {
             etUserPassword.error = "Please enter password"
         }
+        if (userRole.isEmpty()) {
+            etUserRole.error = "Please enter role"
+        }
 
         val userId = dbRef.push().key!!
 
-        val user = UserModel(userId, userName, userUsername, userPassword)
+        val user = UserModel(userId, userName, userUsername, userPassword, userRole)
 
         dbRef.child(userId).setValue(user)
             .addOnCompleteListener {
@@ -59,6 +65,7 @@ class UserInsertionActivity : AppCompatActivity() {
                 etUserName.text.clear()
                 etUserUsername.text.clear()
                 etUserPassword.text.clear()
+                etUserRole.text.clear()
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
