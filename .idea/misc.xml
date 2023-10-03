@@ -10,21 +10,28 @@
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_makanan_details.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_makanan_fetching.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_makanan_insertion.xml" value="0.1" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_meja.xml" value="0.2" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_meja_details.xml" value="0.152" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_meja_insertion.xml" value="0.136" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_meja_main.xml" value="0.1398176291793313" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_menu.xml" value="0.21302083333333333" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_minuman.xml" value="0.21302083333333333" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_minuman_details.xml" value="0.103596757852077" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_minuman_fetching.xml" value="0.103596757852077" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_minuman_insertion.xml" value="0.103596757852077" />
-        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_user.xml" value="0.21302083333333333" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_user.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_user_details.xml" value="0.3333333333333333" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_user_fetching.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/activity_user_insertion.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/makanan_list_item.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/makanan_update_dialog.xml" value="0.1" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/meja_list_item.xml" value="0.16799999999999998" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/meja_update_dialog.xml" value="0.1148705096073517" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/minuman_list_item.xml" value="0.10309017223910841" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/minuman_update_dialog.xml" value="0.10309017223910841" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/user_list_item.xml" value="0.1" />
         <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/layout/user_update_dialog.xml" value="0.1" />
+        <entry key="..\:/Project Android Studio/UKKAppCafe/app/src/main/res/menu/bottom_nav.xml" value="0.2864583333333333" />
       </map>
     </option>
   </component>

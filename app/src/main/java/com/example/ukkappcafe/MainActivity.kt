@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.ukkappcafe.meja.MejaActivity
 import com.example.ukkappcafe.menu.MenuActivity
 import com.example.ukkappcafe.menu.makanan.MakananActivity
 import com.example.ukkappcafe.user.UserMainActivity
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         btnMenu.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMeja.setOnClickListener {
+            val intent = Intent(this, MejaActivity::class.java)
             startActivity(intent)
         }
     }

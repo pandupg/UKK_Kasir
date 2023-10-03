@@ -37,7 +37,7 @@ class UserMainActivity : AppCompatActivity() {
         }
 
         btnBackFromUser = findViewById(R.id.btnBackFromUser)
-        btnInsertDataUser.setOnClickListener {
+        btnBackFromUser.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -78,11 +78,9 @@ class UserMainActivity : AppCompatActivity() {
                     })
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
     }
 }

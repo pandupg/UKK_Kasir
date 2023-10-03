@@ -14,6 +14,15 @@
         android:theme="@style/Theme.UKKAppCafe"
         tools:targetApi="31">
         <activity
+            android:name=".meja.MejaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meja.MejaDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meja.MejaInsertionActivity"
+            android:exported="false" />
+        <activity
             android:name=".menu.minuman.MinumanDetailsActivity"
             android:exported="false" />
         <activity

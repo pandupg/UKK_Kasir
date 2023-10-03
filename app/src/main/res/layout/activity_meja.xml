@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    tools:context=".user.UserMainActivity">
+    tools:context=".meja.MejaActivity">
 
     <ImageButton
-        android:id="@+id/btnBackFromUser"
+        android:id="@+id/btnBackFromMeja"
         android:layout_width="25dp"
         android:layout_height="32dp"
         android:background="@color/white"
@@ -21,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5.9dp"
         android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/btnBackFromUser"
+        android:layout_toRightOf="@+id/btnBackFromMeja"
         android:text="Back"/>
 
     <TextView
@@ -31,22 +30,22 @@
         android:textSize="20sp"
         android:layout_toRightOf="@id/back"
         android:gravity="center"
-        android:text="USER"
+        android:text="MEJA"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUser"
+        android:id="@+id/rvMeja"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:layout_below="@+id/btnBackFromUser"
-        tools:listitem="@layout/user_list_item"/>
+        android:layout_below="@+id/btnBackFromMeja"
+        tools:listitem="@layout/meja_list_item"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnInsertDataUser"
+        android:id="@+id/btnInsertDataMeja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -56,4 +55,5 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/add" />
+
 </RelativeLayout>
