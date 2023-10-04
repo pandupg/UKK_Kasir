@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.ukkappcafe.meja.MejaActivity
 import com.example.ukkappcafe.menu.MenuActivity
-import com.example.ukkappcafe.menu.makanan.MakananActivity
 import com.example.ukkappcafe.user.UserMainActivity
 
 class MainActivity : AppCompatActivity() {

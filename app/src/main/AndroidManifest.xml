@@ -14,6 +14,12 @@
         android:theme="@style/Theme.UKKAppCafe"
         tools:targetApi="31">
         <activity
+            android:name=".menu.MenuInsertionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.MenuDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".meja.MejaActivity"
             android:exported="false" />
         <activity
@@ -22,30 +28,6 @@
         <activity
             android:name=".meja.MejaInsertionActivity"
             android:exported="false" />
-        <activity
-            android:name=".menu.minuman.MinumanDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.minuman.MinumanFetchingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.minuman.MinumanInsertionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.makanan.MakananDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.makanan.MakananFetchingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.makanan.MakananInsertionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.minuman.MinumanActivity"
-            android:exported="true" />
-        <activity
-            android:name=".menu.makanan.MakananActivity"
-            android:exported="true" />
         <activity
             android:name=".menu.MenuActivity"
             android:exported="true" />

@@ -1,86 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.makanan.MakananDetailsActivity">
+    android:padding="16dp"
+    tools:context=".menu.MenuInsertionActivity">
 
-    <Button
-        android:id="@+id/btnUpdateMakanan"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Update"
-        app:layout_constraintEnd_toStartOf="@+id/btnDeleteMakanan"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
-
-    <Button
-        android:id="@+id/btnDeleteMakanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdateMakanan"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Menambahkan Menu"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
-
-
-        <LinearLayout
-            android:id="@+id/id_lin"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2"
-
-            >
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Makanan id"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.4">
-
-                <TextView
-                    android:id="@+id/tvMakananId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/contact_lin"
@@ -101,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Makanan Name"
+                    android:text="Name"
                     android:textColor="@color/black"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -111,14 +60,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.4">
 
-                <TextView
-                    android:id="@+id/tvMakananName"
+                <EditText
+                    android:id="@+id/etMenuName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/black"
+                    android:ems="10"
+                    android:inputType="textPersonName"
                     android:textSize="15sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -141,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Makanan Deskripsi"
+                    android:text="Jenis"
                     android:textColor="@color/black"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -151,14 +100,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.4">
 
-                <TextView
-                    android:id="@+id/tvMakananDeskripsi"
+                <EditText
+                    android:id="@+id/etMenuJenis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/black"
+                    android:ems="10"
+                    android:inputType="textPersonName"
                     android:textSize="15sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -184,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Harga makanan"
+                    android:text="Deskripsi"
                     android:textColor="@color/black"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -194,16 +143,69 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.4">
 
-                <TextView
-                    android:id="@+id/tvMakananHarga"
+                <EditText
+                    android:id="@+id/etMenuDeskripsi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text=""
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Harga"
                     android:textColor="@color/black"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4">
+
+                <EditText
+                    android:id="@+id/etMenuHarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:ems="10"
+                    android:inputType="textPersonName"
                     android:textSize="15sp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Save Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

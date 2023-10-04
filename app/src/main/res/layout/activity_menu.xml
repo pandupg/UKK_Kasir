@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_margin="16dp"
     tools:context=".menu.MenuActivity">
+
+    <ImageButton
+        android:id="@+id/btnBackFromMenu"
+        android:layout_width="25dp"
+        android:layout_height="32dp"
+        android:background="@color/white"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.9dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/btnBackFromMenu"
+        android:text="Back"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="SELAMAT DATANG"
-        android:textAlignment="center"
-        android:textSize="30sp"
+        android:layout_marginTop="5.9dp"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/back"
+        android:gravity="center"
+        android:text="MENU"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_keMakanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="MAKANAN" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_below="@+id/btnBackFromMenu"
+        tools:listitem="@layout/menu_list_item"/>
 
-    <Button
-        android:id="@+id/btn_keMinuman"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnInsertDataMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="MINUMAN" />
-</LinearLayout>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/add" />
+</RelativeLayout>
